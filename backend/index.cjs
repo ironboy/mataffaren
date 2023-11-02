@@ -5,7 +5,8 @@ const port = 4000;
 
 // proxy willys
 app.get('/api/*', async (req, res) => {
-  res.json(await (await fetch(`https://www.willys.se${req.url.slice(4)}`)).json())
+  res.json({ error: 'stupid backend' });
+  // res.json(await (await fetch(`https://www.willys.se${req.url.slice(4)}`)).json())
 });
 
 // Category tree: /api/leftMenu/categorytree 
